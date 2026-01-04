@@ -338,6 +338,13 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.8s ease;
 }
 
+.hero-background-image {
+    background: url('images/hero-bg.jpg') center/cover no-repeat fixed,
+                linear-gradient(135deg, #e10600 0%, #ff6b66 100%); /* Добавлено */
+    z-index: -2;
+    transition: opacity 0.8s ease;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -933,6 +940,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Адаптивность для мобильных */
+/* Адаптивность для мобильных - ОБНОВЛЕНО */
 @media (max-width: 768px) {
     .header .container {
         padding: 0 20px;
@@ -1000,7 +1008,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero {
         padding: 150px 0 80px;
-        background-attachment: scroll;
+        min-height: 100vh; /* Добавлено! */
     }
     
     .hero-title {
