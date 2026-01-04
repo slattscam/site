@@ -1010,6 +1010,15 @@ h1, h2, h3, h4, h5, h6 {
         padding: 150px 0 80px;
         min-height: 100vh; /* Добавлено! */
     }
+
+    .hero-background-image {
+        background-attachment: scroll;
+        position: fixed; /* или absolute */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
     
     .hero-title {
         font-size: 2.2rem;
@@ -1268,4 +1277,5 @@ h1, h2, h3, h4, h5, h6 {
     .contact-buttons .button {
         width: 100%;
     }
+
 }
