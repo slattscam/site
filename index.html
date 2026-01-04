@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Bar — Парикмахерская в Хабаровске</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="icon" type="image/png" href="images/icon.png">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">COLOR <span class="logo-accent">BAR</span></span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="header-actions">
+                    <a href="tel:+79625030394" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span class="phone-text">+7 (962) 503-03-94</span>
+                    </a>
+                    <button class="menu-toggle" aria-label="Открыть меню">
+                        <span class="menu-dot"></span>
+                        <span class="menu-dot"></span>
+                        <span class="menu-dot"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер с фоном - ОБНОВЛЕНО -->
+    <section class="hero" id="hero">
+        <div class="hero-background-image"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-on-scroll">Стильные стрижки и окрашивание в Хабаровске</h1>
+                <p class="hero-subtitle animate-on-scroll">Профессиональные мастера создадут идеальный образ именно для вас.</p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="https://wa.me/79625030394?text=Здравствуйте, пишу вам с сайта Color Bar" class="button button-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="#map-section" class="button button-route">
+                        <i class="fas fa-map-marker-alt"></i> Как добраться
+                    </a>
+                    <a href="tel:+79625030394" class="button button-call">
+                        <i class="fas fa-phone"></i> Позвонить
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- О нас -->
+        <section class="about section-padded" id="about">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Добро пожаловать в <span class="text-accent">Color Bar</span></h2>
+                <p class="section-subtitle animate-on-scroll">Место, где рождается красота и уверенность. Профессиональные материалы и последние тренды.</p>
+                
+                <div class="about-content">
+                    <div class="about-gallery animate-on-scroll">
+                        <div class="gallery-item">
+                            <img src="images/img9.jpg" alt="Интерьер салона Color Bar">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/img1.jpg" alt="Рабочее место мастера">
+                        </div>
+                    </div>
+
+                    <div class="about-main-content">
+                        <div class="about-text animate-on-scroll">
+                            <p>В <strong>Color Bar</strong> мы создаем индивидуальный стиль для каждого клиента. Наши мастера знают все о современных техниках стрижки, окрашивания и ухода за волосами.</p>
+                            <div class="features">
+                                <div class="feature">
+                                    <i class="fas fa-award"></i>
+                                    <span>Профессиональные мастера</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-seedling"></i>
+                                    <span>Качественные материалы</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Индивидуальный подход</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Цены с иконками -->
+        <section class="prices section-padded" id="prices">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Цены на услуги</h2>
+                <p class="section-subtitle animate-on-scroll">Прозрачное ценообразование и полный спектр услуг</p>
+                
+                <div class="pricing-table animate-on-scroll">
+                    <div class="price-row">
+                        <div class="price-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="price-service">Женская стрижка</div>
+                        <div class="price-value">от 800 ₽</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-icon">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <div class="price-service">Мужская стрижка</div>
+                        <div class="price-value">от 800 ₽</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="price-service">Сложное окрашивание</div>
+                        <div class="price-value">от 2500 ₽</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="price-service">Кератиновое выпрямление</div>
+                        <div class="price-value">от 3000 ₽</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="price-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="price-service">Химическая завивка</div>
+                        <div class="price-value">от 3500 ₽</div>
+                    </div>
+                    <div class="price-row highlight">
+                        <div class="price-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <div class="price-service">Парафинотерапия рук</div>
+                        <div class="price-value">Бесплатно*</div>
+                    </div>
+                </div>
+                <p class="price-note">* При предъявлении записи через 2ГИС</p>
+            </div>
+        </section>
+
+        <!-- Карта и контакты -->
+        <section class="contacts section-padded" id="contacts">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Контакты</h2>
+                <p class="section-subtitle animate-on-scroll">Приходите к нам в гости или свяжитесь удобным способом</p>
+                
+                <div class="contacts-wrapper">
+                    <div class="contact-info animate-on-scroll">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Адрес салона</h3>
+                                <p><strong>г. Хабаровск, ул. Сергеевская, 24а</strong></p>
+                                <p class="contact-note">Ближайшая остановка: «ТК Берёзовка»</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Режим работы</h3>
+                                <p><strong>Ежедневно: 10:00 — 20:00</strong></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Телефон для записи</h3>
+                                <p><a href="tel:+79625030394">+7 (962) 503-03-94</a></p>
+                                <p class="contact-note">Звоните с 10:00 до 20:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Способы оплаты</h3>
+                                <p>Наличные, банковские карты, бесконтактная оплата</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-buttons">
+                            <a href="https://wa.me/79141112233?text=Здравствуйте, пишу вам с сайта Color Bar" class="button button-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="tel:+79625030394" class="button button-call">
+                                <i class="fas fa-phone"></i> Позвонить
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map animate-on-scroll" id="map-section">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>COLOR <span class="logo-accent">BAR</span></span>
+                    <p class="footer-tagline">Парикмахерская в Хабаровске</p>
+                </div>
+                
+                <div class="footer-info">
+                    <div class="footer-contacts">
+                        <p><i class="fas fa-map-marker-alt"></i> ул. Сергеевская, 24а, Хабаровск</p>
+                        <p><i class="fas fa-phone"></i> +7 (962) 503-03-94</p>
+                        <p><i class="fab fa-whatsapp"></i> +7 (962) 503-03-94</p>
+                    </div>
+                    
+                    <div class="footer-hours">
+                        <p><strong>Режим работы:</strong> ежедневно 10:00-20:00</p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2026 Парикмахерская Color Bar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
